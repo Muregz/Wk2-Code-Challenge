@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+.input-container input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.input-container button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#itemList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item {
+    margin-bottom: 8px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.item.purchased {
+    background-color: #d3d3d3; /* Change background color for purchased items */
+}
+
+.item span {
+    flex-grow: 1; /* Allow the span to grow to fill the space */
+}
+
+.item button {
+    margin-left: 8px;
+    cursor: pointer;
+}
