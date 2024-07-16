@@ -53,6 +53,7 @@ ul li{
     padding:12px 8px 12px 50px;
     user-select: none;
     cursor:pointer;
+    position: relative;
 
 }
 ul li::before{
@@ -61,6 +62,7 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius:50%;
+    background-image: url(images/images.png);
     background-size: cover;
     background-position: center;
     top:12px;
@@ -69,8 +71,10 @@ ul li::before{
 ul li.checked{
     color:#555;
     text-decoration: line-through;
+    
 }
 ul li.checked::before{
+    background-image: url(images/pngtree-green-check-icon-design-template-vector-png-image_3971422.png);
 
 }
 ul li span{
