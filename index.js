@@ -1,6 +1,5 @@
 const inputbox=document.getElementById("input-box");
 const listcontainer = document.getElementById("list-container");
-
 function addItem(){
     if(inputbox.value === ''){
         alert("You must input an item!");
@@ -26,7 +25,6 @@ listcontainer.addEventListener("click", function(e){
         saveData();
     }
 }, false);
-
 function saveData(){
     localStorage.setItem("data",listcontainer.innerHTML);
 }
@@ -35,10 +33,7 @@ function showList(){
 
 }
 showList();
-
-
-document.getElementById('clearButton').addEventListener('click', function() {
-    
+document.getElementById('clearButton').addEventListener('click', function() {    
     localStorage.removeItem('shoppingList');
     listcontainer.innerHTML = '';
    });
