@@ -18,12 +18,15 @@ function addItem(){
 }
 listcontainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
-        e.target.classlist.toggle("checked");
+        e.target.classList.toggle("checked");
+        saveData();
     }
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        saveData();
     }
-},false);
+}, false);
+
 function saveData(){
     localStorage.setItem("data",listcontainer.innerHTML);
 }
@@ -31,3 +34,4 @@ function showList(){
     listcontainer.innerHTML = localStorage.getItem("data");
 
 }
+showList();
