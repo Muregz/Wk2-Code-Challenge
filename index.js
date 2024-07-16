@@ -35,3 +35,10 @@ function showList(){
 
 }
 showList();
+
+
+document.getElementById('clearButton').addEventListener('click', function() {
+    
+    localStorage.removeItem('shoppingList');
+    listcontainer.innerHTML = '';
+   });
