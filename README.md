@@ -52,4 +52,31 @@ Attach an event listener to the "Clear List" button to remove all items from the
         span.innerHTML = "\u00d7";
         li.appendChild(span);
 
-9. 
+9. If the item clicked is ="LI" the item on the list will be checked,If the item is already checked it will unchecked.
+      listcontainer.addEventListener("click", function(e))
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+
+10. It stores the contents of the list into the browsers local storage.
+    function saveData(){
+    localStorage.setItem("data",listcontainer.innerHTML);
+}
+
+11. displays the items on the list container.
+    function showList(){
+    listcontainer.innerHTML = localStorage.getItem("data");
+
+}
+ showList();
+12. Removes all items from the list container.
+    
+document.getElementById('clearButton').addEventListener('click', function() {    
+    localStorage.removeItem('shoppingList');
+    listcontainer.innerHTML = '';
+   });
